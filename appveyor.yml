@@ -7,17 +7,17 @@ environment:
 # Install scripts
 install:
   # Get latest stable version of Node.js or io.js
-	- ps: Install-Prduct node $env:nodejs_version
+  - ps: Install-Prduct node $env:nodejs_version
 	#install modules
-	- npm install
+  - npm install
 
 	# Post-install test scripts
-	test_script:
+  test_script:
 	  # Output useful infor for debug
-		- node --version
-		- npm --version
+    - node --version
+    - npm --version
 		# Run tests
-		- npm test
+    - npm test
 
 		# Don't actually build.
-		build: off
+    build: off
