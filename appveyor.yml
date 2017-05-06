@@ -8,16 +8,16 @@ environment:
 install:
   # Get latest stable version of Node.js or io.js
   - ps: Install-Prduct node $env:nodejs_version
-	#install modules
+  # install modules
   - npm install
 
-	# Post-install test scripts
+  # Post-install test scripts
   test_script:
-	  # Output useful infor for debug
+    # Output useful infor for debug
     - node --version
     - npm --version
-		# Run tests
+    # Run tests
     - npm test
 
-		# Don't actually build.
+    # Don't actually build.
     build: off
